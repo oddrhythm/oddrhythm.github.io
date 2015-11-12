@@ -131,8 +131,23 @@
 				font-weight:bold;
 			}
 			
-			#part2, #part3, #part4 { display:none; }
+			.div1 {
+				border: 2px solid #9bcc8b;
+			}
 			
+			.div2 {
+				border: 2px solid #ffce00;
+			}
+			
+			.div3 {
+				border: 2px solid #00A5E5;
+			}
+			
+			.div4 {
+				border: 2px solid #ee95b0;
+			}
+			
+			#part2, #part3, #part4 { display:none; }
 			
 			
 			.radio-toolbar input[type="radio"] {
@@ -143,6 +158,8 @@
 				border:0px;
 				height:25px;
 				alt:"Next part";
+				vertical-align: top;
+				padding-top:5px;
 			}
 			
 			.radio-toolbar label {
@@ -151,11 +168,15 @@
 				padding:4px 11px;
 				font-family:Arial;
 				font-size:16px;
+				
+				border-radius: 15px;
 			}
 
 			.radio-toolbar input[type="radio"]:checked + label { 
 				background-color:#ffa500;
 			}
+			
+			
 		</style>
 		
 		<script type="text/javascript">
@@ -899,32 +920,32 @@
 					<ul class="tabs">
 						<li>
 							<a href="#" title="part1" class="tab active">
-								<img class="tab" src="img/part1.PNG">
+								<img class="tab" src="http://i.imgur.com/bppuyOJ.png">
 							</a>
 						</li>
 						<li>
 							<a href="#" id="part2_button" title="part2" class="tab">
-								<img class="tab" src="img/part2.PNG">
+								<img class="tab" src="http://i.imgur.com/yDnAOXw.png">
 							</a>
 						</li>
 						<li>
 							<a href="#" id="part3_button" title="part3" class="tab">
-								<img class="tab" src="img/part3.PNG">
+								<img class="tab" src="http://i.imgur.com/dR4spqz.png">
 							</a>
 						</li>
 						<li>
 							<a href="#" id="part4_button" title="part4" class="tab">
-								<img class="tab" src="img/part4.PNG">
+								<img class="tab" src="http://i.imgur.com/nxmox3I.png">
 							</a>
 						</li>
 					</ul>
 					
-					<div id="part1" class="content">
+					<div id="part1" class="content div1">
 						<B>PID: </B><input type="text" id="PID" value="Carolyn" style="width:60%;height:25px;">
 						<input id="pidButton" type="image" src="img/search.png" alt="Search" value="Update" style="width:25px;"/>
 					</div>
 					
-					<div id="part2" class="content">
+					<div id="part2" class="content div2">
 						<button id="homButton" width="50px">
 							<table border="0" width="100%">
 								<tr>
@@ -944,7 +965,7 @@
 						</button>
 					</div>
 					
-					<div id="part3" class="content">
+					<div id="part3" class="content div3">
 						<table border="0" width="100%" cellpadding="0">
 							<tr>
 								<td width="25%">
@@ -964,7 +985,7 @@
 						</table>
 					</div>
 					
-					<div id="part4" class="content" >
+					<div id="part4" class="content div4" >
 						<form id='radio-form' class="radio-toolbar">   
 							<input type="radio" id="radio1" name="radioList" value="1">
 							<label for="radio1">1</label>
