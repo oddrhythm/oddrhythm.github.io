@@ -176,10 +176,7 @@
 				background-color:#ffa500;
 			}
 			
-			.red
-			{
-				background-color:red;
-			}
+			
 		</style>
 		
 		<script type="text/javascript">
@@ -855,12 +852,6 @@
 					console.log(this.id + " button clicked"); 
 					toolbar.activate(esri.toolbars.Draw["FREEHAND_POLYGON"]);
 				};
-				
-				$('input[id="draw"]').click(function(){
-					if(!$(this).hasClass('red'))
-						$(this).addClass('red');
-					else $(this).removeClass('red');
-				});
 				
 				function addToMap(evt) {
 					var symbol;
