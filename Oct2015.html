@@ -863,7 +863,6 @@
 				function addToMap(evt) {
 					var symbol;
 					toolbar.deactivate();
-					$("draw").removeClass('gray');
 					
 					//map.showZoomSlider();
 					switch (evt.geometry.type) {
@@ -884,7 +883,7 @@
 					//document.getElementById("fNum").innerHTML = ftcount;
 					var newAttributes = { 	PID: currPID,
 											ftcount: ftcount,
-											Rank: 3
+											Rank: 1
 										};
 					
 					var graphic = new esri.Graphic(evt.geometry, symbol, newAttributes);
@@ -894,6 +893,8 @@
 						//inputLyr.setDefinitionExpression(text);
 						//map.addLayer(inputLyr);
 					});
+					
+					$("draw").removeClass('gray');
 				}
 				
 				function oldLayerRefresh() {
