@@ -858,11 +858,12 @@
 				  
 				  //If draw active --> disable
 					if ($(this).hasClass('gray')) toolbar.activate(esri.toolbars.Draw["FREEHAND_POLYGON"]);
+					
+					if (!$(this).hasClass('gray')) toolbar.deactivate();
 				});
 				
 				function addToMap(evt) {
 					var symbol;
-					toolbar.deactivate();
 					
 					//map.showZoomSlider();
 					switch (evt.geometry.type) {
@@ -894,7 +895,6 @@
 						//map.addLayer(inputLyr);
 					});
 					
-					$("draw").removeClass('gray');
 				}
 				
 				function oldLayerRefresh() {
