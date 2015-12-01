@@ -857,9 +857,7 @@
 				};
 				
 				$('input[id="draw"]').click(function(){
-					if(!$(this).hasClass('red'))
-						$(this).addClass('red');
-					else $(this).removeClass('red');
+				  $(this).toggleClass('red');
 				});
 				
 				function addToMap(evt) {
