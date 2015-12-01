@@ -176,9 +176,9 @@
 				background-color:#ffa500;
 			}
 			
-			.red
+			.gray
 			{
-				background-color:red;
+				background-color:#808080;
 			}
 		</style>
 		
@@ -857,7 +857,10 @@
 				};
 				
 				$('input[id="draw"]').click(function(){
-				  $(this).toggleClass('red');
+				  $(this).toggleClass('gray');
+				  
+				  //If draw active --> disable
+				  toolbar.deactivate();
 				});
 				
 				function addToMap(evt) {
@@ -953,6 +956,7 @@
 					</div>
 					
 					<div id="part2" class="content div2">
+						<!--
 						<button id="homButton" width="50px">
 							<table border="0" width="100%">
 								<tr>
@@ -960,8 +964,14 @@
 									<td width="75%"><font size="3" face="verdana"><b>Home</b></font></td>
 								</tr>
 							</table>
+						</button>-->
+						
+						<button id="homButton" style="padding:4px;font-size:16px;">
+							<img src="img/fam_select.png" alt="" width="20px" height="20px">
+							<b>Home</b>
 						</button>
 						
+						<!--
 						<button id="famButton" width="50px">
 							<table border="0" width="100%">
 								<tr>
@@ -969,16 +979,23 @@
 									<td width="75%"><font size="3" face="verdana"><b>Familiar</b></font></td>
 								</tr>
 							</table>
+						</button>-->
+						
+						<button id="famButton" style="padding:4px;font-size:16px;">
+							<img src="img/fav.png" alt="" width="20px" height="20px">
+							<b>Familiar</b>
 						</button>
 					</div>
 					
 					<div id="part3" class="content div3">
+						<!--
 						<table border="0" width="100%" cellpadding="0">
 							<tr>
 								<td width="25%">
 									<p id="fNum"></p>
 								</td>
 								<td width="75%">
+									
 									<button id="draw" width="50px">
 										<table border="0" width="100%">
 											<tr>
@@ -987,9 +1004,21 @@
 											<tr>
 										</table>
 									</button>
+									
+									
 								</td>
 							</tr>
-						</table>
+						</table>-->
+						<!--
+						<button id="draw" style="padding:4px;font-size:16px;">
+							<img src="img/draw.png" alt="" width="20px" height="20px">
+							<b>Draw</b>
+						</button>
+						-->
+						<center>
+							<!--<img src="img/draw.png" alt="" width="20px" height="20px"><b>-->
+							<input id="draw" value="  Draw " style="width:80px;padding:4px;font-size:16px;"/></b>
+						</center>
 					</div>
 					
 					<div id="part4" class="content div4" >
