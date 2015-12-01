@@ -857,10 +857,10 @@
 				};
 				
 				$('input[id="draw"]').click(function(){
-				  $(this).toggleClass('gray');
+				 	$(this).toggleClass('gray');
 				  
 				  //If draw active --> disable
-				  toolbar.deactivate();
+					if (!$(this).hasClass('gray')) toolbar.deactivate();
 				});
 				
 				function addToMap(evt) {
