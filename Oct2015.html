@@ -850,17 +850,14 @@
 					});
 				}
 				
-				var drawButton = document.getElementById("draw");
-				drawButton.onclick = function() { 
-					console.log(this.id + " button clicked"); 
-					toolbar.activate(esri.toolbars.Draw["FREEHAND_POLYGON"]);
-				};
-				
 				$('input[id="draw"]').click(function(){
+					console.log("Draw button clicked"); 
+					
+					
 				 	$(this).toggleClass('gray');
 				  
 				  //If draw active --> disable
-					if (!$(this).hasClass('gray')) toolbar.deactivate();
+					if ($(this).hasClass('gray')) toolbar.activate(esri.toolbars.Draw["FREEHAND_POLYGON"]);
 				});
 				
 				function addToMap(evt) {
@@ -882,7 +879,7 @@
 				  
 					ftcount++;
 					console.log("ftcount: "+ftcount);
-					document.getElementById("fNum").innerHTML = ftcount;
+					//document.getElementById("fNum").innerHTML = ftcount;
 					var newAttributes = { 	PID: currPID,
 											ftcount: ftcount,
 											Rank: 3
